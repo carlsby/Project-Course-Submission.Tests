@@ -5,6 +5,8 @@ VisualStudioVersion = 17.7.34202.233
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project-Course-Submission.Tests", "Project-Course-Submission.Tests.csproj", "{DCA94E55-A534-48A4-AB44-FDB73469FE0D}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Project-Course-Filippa.Tests", "..\..\..\OneDrive\Skrivbord\Projekt\Project-Course-Submission.Tests\Project-Course-Filippa.Tests.csproj", "{BC7E9B89-57D7-4106-9F72-90EFEA74D21A}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{DCA94E55-A534-48A4-AB44-FDB73469FE0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DCA94E55-A534-48A4-AB44-FDB73469FE0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DCA94E55-A534-48A4-AB44-FDB73469FE0D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BC7E9B89-57D7-4106-9F72-90EFEA74D21A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BC7E9B89-57D7-4106-9F72-90EFEA74D21A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BC7E9B89-57D7-4106-9F72-90EFEA74D21A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BC7E9B89-57D7-4106-9F72-90EFEA74D21A}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
