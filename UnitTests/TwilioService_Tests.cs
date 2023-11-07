@@ -17,7 +17,7 @@ public class TwilioService_Tests
     }
 
     [Fact]
-    public async Task SendTextVerification_ShouldRedirectToOTP_WhenStatusCode200()
+    public async Task SendTextVerification_ShouldDisplayStatusCode200_WhenSuccessful()
     {
         // Arrange
         var model = new PhoneNumberViewModel
@@ -44,5 +44,30 @@ public class TwilioService_Tests
         Assert.NotNull(result);
         Assert.Equal(StatusCode.Ok, result.StatusCode);
         Assert.Equal(model, result.Content);
+    }
+
+    [Fact]
+    public async Task SendTextVerification_ShouldDisplayStatusCode400_WhenUnsuccessful()
+    {
+        // Arrange
+        var model = new PhoneNumberViewModel();
+
+        var response = new ServiceResponse<PhoneNumberViewModel>
+        {
+            StatusCode = StatusCode.BadRequest,
+            Content = null
+        };
+
+        _twilioService.Setup(x => x.SendTextVerification(model)).ReturnsAsync(response);
+        var twilioService = _twilioService.Object;
+
+
+        // Act
+        var result = await twilioService.SendTextVerification(model);
+
+
+        // Assert
+        Assert.Null(result.Content);
+        Assert.Equal(StatusCode.BadRequest, result!.StatusCode);
     }
 }
