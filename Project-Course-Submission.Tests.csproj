@@ -25,5 +25,9 @@
 		</PackageReference>
 	</ItemGroup>
 
+	<ItemGroup>
+	  <ProjectReference Include="..\..\..\OneDrive\Skrivbord\Projekt\Project-Course-Submission\Project-Course-Submission.csproj" />
+	</ItemGroup>
+
 
 </Project>

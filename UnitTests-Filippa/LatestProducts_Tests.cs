@@ -14,7 +14,7 @@ namespace Project_Course_Submission.Tests.UnitTests
         public void GetLatestProducts_ReturnsExpectedData()
         {
             // Arrange
-            var latestProductsService = new LatestProductsService(); // Om det inte finns några beroenden att mocka
+            var latestProductsService = new LatestProductsService(); 
 
             // Act
             var latestProducts = latestProductsService.GetLatestProducts();
@@ -23,14 +23,14 @@ namespace Project_Course_Submission.Tests.UnitTests
             Assert.NotNull(latestProducts);
             Assert.IsType<LatestProductsViewModel>(latestProducts);
 
-            // Här kan du göra fler specifika assertions för dina data.
+       
             Assert.NotNull(latestItemsList);
             Assert.Equal(3, latestItemsList.Count);
             Assert.Equal("1", latestItemsList[0].Id);
-            Assert.Equal("Soft Chill Pants", latestItemsList[0].Title);
+            Assert.Equal("Welcome To Manero", latestItemsList[0].Title);
             Assert.Equal("Shop Now", latestItemsList[0].ButtonUrl);
             Assert.Equal("/images/softpants.jpg", latestItemsList[0].ImageUrl);
-            // Lägg till fler assertions för att kontrollera att datan är korrekt.
+          
         }
     }
 }
